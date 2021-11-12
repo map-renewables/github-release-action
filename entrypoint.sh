@@ -22,7 +22,7 @@ if [[ "$TAG" =~ $SEMVER_PATTERN ]]; then
   SEMVER_MAJOR=${BASH_REMATCH[2]}
   SEMVER_PRERELEASE=${BASH_REMATCH[6]}
 
-  if [[ $SEMVER_MAJOR > 0 && -z $SEMVER_PRERELEASE ]]; then
+  if [[ -z $SEMVER_PRERELEASE ]]; then
     IS_STABLE="true"
   fi
 fi
